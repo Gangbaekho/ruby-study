@@ -18,4 +18,5 @@ def say(thing_to_say)
     p thing_to_say
 end
 
+# 인자를 보내는데 ()를 안쓰는게 익숙하지 않네.
 say "call say function"
