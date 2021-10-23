@@ -40,3 +40,6 @@ puts "Enter second number"
 num_two = gets.chomp
 
 puts "The first number multiplied by the second number is #{num_one.to_i * num_two.to_i}"
+
+# modulus 나머지값 이건 똑같네 하긴
+puts 5 % 2
