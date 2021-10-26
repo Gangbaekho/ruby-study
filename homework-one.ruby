@@ -14,13 +14,15 @@ dial_books = {
 def get_city_names(some_hash)
     
     keys = some_hash.keys
-    keys.each do |key|
-        p key
-    end
 end
 
 def get_area_code(some_hash, key)
-    p some_hash[key]
+    
+    if some_hash.include?(key)
+        return some_hash[key]
+    end
+
+    "not exists area."
 end
 
 
@@ -34,8 +36,8 @@ loop do
 
     puts "Which city do you want the area code for?"
     
-    get_city_names(dial_books)
+    puts get_city_names(dial_books)
 
     area = gets.chomp
-    get_area_code(dial_books,area)
+    puts get_area_code(dial_books, area)
 end
