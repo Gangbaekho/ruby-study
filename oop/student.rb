@@ -1,3 +1,5 @@
+require 'bcrypt'
+
 # class는 CamelCase를 사용한다는 것
 # field들은 @를 써서 사용해야 한다는 것.
 class Student
