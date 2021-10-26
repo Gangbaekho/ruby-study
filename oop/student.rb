@@ -4,6 +4,7 @@ class Student
 
     # field의 getter와 setter를 만들어주는 역할을 한다
     # lombok 처럼 자동으로 해주는 기능은 없나. 이것조차 귀찮긴 한데 말이다.
+    # 이것도 field들을 명시할 수 있지만 확실한건 아니라서 좀 그렇네.
     attr_accessor :first_name, :last_name, :username, :email, :password
 
     # 이건 getter만 만들어주는 것이라고 생각하면 된다.
@@ -16,6 +17,8 @@ class Student
     # @username
     # @passord
 
+    # 여기에서 field들을 알 수 있찌만
+    # 직접적으로 위처럼 명시하는게 더 좋다고 생각한다
     def initialize(first_name,last_name,username,email,password)
         @first_name = first_name
         @last_name = last_name
