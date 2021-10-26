@@ -12,9 +12,15 @@ dial_books = {
 }
 
 def get_city_names(some_hash)
+    
+    keys = some_hash.keys
+    keys.each do |key|
+        p key
+    end
 end
 
-def get_area_code(somehash, key)
+def get_area_code(some_hash, key)
+    p some_hash[key]
 end
 
 
@@ -23,16 +29,13 @@ end
 loop do
     puts "Do you want to lookup an area code based on a city name? (Y/N)"
     
-    command = gets.chomp
-    break if command == "N"
+    command = gets.chomp.downcase
+    break if command != "y"
 
     puts "Which city do you want the area code for?"
     
-    dial_books.each do |key, value|
-        puts key
-    end
+    get_city_names(dial_books)
 
     area = gets.chomp
-    puts dial_books[area]
-
+    get_area_code(dial_books,area)
 end
