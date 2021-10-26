@@ -8,6 +8,8 @@ module Crud
     # 이런식으로 사용해야 한다는 것을 알아두자.
     # Crud를 붙임으로써 밖에서 사용할 수 있는 static method가 된다는 개념인 듯 하다.
     # Crud를 사용해도 되고 자신이 정의한 method이면은 self를 써도 된다는 개념임.
+    # Crud나 self를 안붙이면은 instance method가 되어서
+    # instance를 생성해야지만 사용할 수 있다는 개념이다.
     def Crud.create_hash_digest(password)
 
         BCrypt::Password.create(password)

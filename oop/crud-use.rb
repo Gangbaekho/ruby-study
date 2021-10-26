@@ -19,4 +19,5 @@ users = [
     }
 ]
 
-hashed_user = Crud.create_secure_users(users)
+hashed_users = Crud.create_secure_users(users)
+puts hashed_users
